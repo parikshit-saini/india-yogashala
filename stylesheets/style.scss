@@ -1,0 +1,252 @@
+// Google font
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+// Color Variables 
+
+$primary: radial-gradient(91% 105.38% at 9% 28.21%, #FF9978 0%, #F15A29 79.07%);
+$heading: linear-gradient(90.81deg, #F15A29 1.49%, #5B1600 50.7%);
+$darkText: #5B1600;
+$dark: 000000;
+$secondary: #404040;
+$light: #FFE4DC;
+$white: #ffffff;
+
+// Custom Buttons
+
+.btn-main {
+    background: $primary;
+    color: $white;
+    border-radius: 8px;
+    padding: 10px 30px;
+
+    &:hover {
+        opacity: 0.9;
+        color: $white;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+// Custom mixins
+
+@mixin itemPosition($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+// Custom Styles 
+
+h1 {
+    font-size: 35px;
+    background: linear-gradient(90.81deg, #F15A29 1.49%, #5B1600 50.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    font-size: 30px;
+    background: linear-gradient(90.81deg, #F15A29 1.49%, #5B1600 50.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h3 {
+    font-size: 25px;
+    color: $secondary;
+}
+
+h4 {
+    font-size: 20px;
+    color: $darkText;
+}
+
+.centerMid {
+    @include itemPosition(center, center)
+}
+
+// Index page Style 
+
+section.headerTop {
+
+    background-image: url('../assets/headerTop.png');
+    background-image: url('../assets/headerTop.png');
+    width: 100%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90px;
+}
+
+section.header {
+    margin-top: -50px;
+
+    nav.navbar {
+        ul.navbar-nav {
+            background: linear-gradient(90deg, #5B1600 -1.7%, #F15A29 101.82%);
+            border-radius: 30px 8px;
+            padding: 20px;
+
+            li.nav-item {
+                margin: 0 3px;
+                border-radius: 20px;
+
+                a.nav-link {
+                    color: $light;
+                }
+
+                &:hover {
+                    background-color: $white;
+
+                    a.nav-link {
+                        color: $darkText;
+                    }
+                }
+
+                &.active {
+                    background-color: $white;
+                    border-radius: 20px;
+
+                    a.nav-link {
+                        color: $darkText;
+                    }
+                }
+            }
+        }
+
+        .loginBtn {
+            margin-left: 90px;
+        }
+    }
+}
+
+section.main {
+    background-image: url('../assets/mainImage.jpg');
+    height: 550px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .toggleBtns {
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+        position: absolute;
+        bottom: 170px;
+        right: 30px;
+
+        .btnBox {
+            border: 1px solid $primary;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            @include itemPosition(center, center);
+
+            .fa-arrow-left {
+                color: $light;
+            }
+
+            .fa-arrow-right {
+                color: $light;
+            }
+        }
+
+        .btnBox1 {
+            background: $primary;
+        }
+
+        .btnBox2 {
+            background: $primary;
+        }
+    }
+
+    .owl-carousel-main {
+        position: absolute;
+        bottom: -200px;
+
+        .item {
+            text-align: center;
+
+            .imgBox {
+                background: linear-gradient(96.82deg, #F0F0F0 10%, rgba(255, 255, 255, 0) 104.16%);
+                filter: drop-shadow(5px 4px 20px rgba(0, 0, 0, 0.3));
+                backdrop-filter: blur(10px);
+                border-radius: 15px;
+                padding: 10px;
+
+                img {
+                    border-radius: 12px;
+                }
+
+                h3 {
+                    color: $darkText;
+                    margin-top: 15px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+section.expectation {
+    margin-top: 250px;
+    text-align: center;
+}
+
+section.certifications {
+    padding: 60px 0;
+    text-align: center;
+
+    p {
+        max-width: 800px;
+        margin: 15px auto 50px;
+    }
+
+    .content {
+        background: linear-gradient(360deg, #FFFFFF 4.32%, #F15A29 65.61%, #5B1600 98.99%);
+        border-radius: 15px;
+        width: fit-content;
+        padding: 10px;
+        margin: auto;
+
+        .imgBox {
+            background-color: $white;
+            padding: 8px;
+            width: fit-content;
+            border-radius: 12px;
+            margin-top: 15px;
+
+            h4 {
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+section.yogaschool {
+    padding: 0 0 60px 0;
+
+    .headingRow {
+        p {
+            max-width: 800px;
+            margin: 15px auto 50px;
+        }
+    }
+}
