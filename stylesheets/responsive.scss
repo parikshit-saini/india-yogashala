@@ -1,0 +1,101 @@
+@import "./style.scss";
+
+
+@media only screen and (max-width:1399px) {
+
+    section.header {
+        margin-top: -50px;
+
+        nav.navbar {
+            .loginBtn {
+                margin-left: 0;
+                justify-content: center;
+                margin-top: 12px;
+            }
+        }
+
+        .dropdown {
+            ul.dropdown-menu {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:990px) {
+    footer.footer {
+
+        .container {
+            padding-bottom: 0px;
+
+            .contactDetails {
+
+                padding: 16px 0;
+                order: 1;
+
+            }
+
+
+            .quickLinks {
+
+                padding: 16px 0;
+
+
+            }
+        }
+
+
+    }
+}
+
+@media only screen and (max-width:602px) {
+    footer.footer {
+        padding: 10px;
+        border-radius: 15px 15px 0 0;
+
+        .container {
+
+            .trainingPackages {
+                padding-top: 15px;
+                border-radius: 15px;
+
+                &::before {
+                    display: none;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+
+        }
+
+        .copyright {
+            border-radius: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width:575px) {
+    footer.footer {
+        .container {
+            .contactDetails {
+                text-align: center;
+
+                .detail {
+                    @include itemPosition(center, center);
+                }
+
+                .socialMedia {
+                    @include itemPosition(center, center);
+
+                }
+            }
+
+
+
+        }
+
+
+    }
+}
