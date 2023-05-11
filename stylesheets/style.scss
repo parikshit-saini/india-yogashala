@@ -931,6 +931,42 @@ section.yogaTraine {
     }
 }
 
+section.upcommingEvents {
+    padding: 70px 0 0;
+    text-align: center;
+
+    .tableBox {
+        border: 1px solid $orange;
+        border-radius: 15px;
+
+        .table {
+
+            .table>:not(:last-child)>:last-child {
+                border-bottom-color: $primary !important;
+            }
+        }
+
+    }
+
+    .roomFee {
+        background-color: $orange;
+        color: $light;
+        padding: 15px;
+        border-radius: 15px;
+        width: fit-content;
+        margin: auto;
+
+        h4 {
+            color: $light;
+        }
+
+        h3 {
+            color: $light;
+            font-size: 30px;
+        }
+    }
+}
+
 section.faq {
     padding: 70px 0;
 

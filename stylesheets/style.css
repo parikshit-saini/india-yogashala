@@ -756,6 +756,34 @@ section.yogaTraine .teachers .social i {
   color: #5B1600;
 }
 
+section.upcommingEvents {
+  padding: 70px 0 0;
+  text-align: center;
+}
+section.upcommingEvents .tableBox {
+  border: 1px solid #F15A29;
+  border-radius: 15px;
+}
+section.upcommingEvents .tableBox .table .table > :not(:last-child) > :last-child {
+  border-bottom-color: radial-gradient(91% 105.38% at 9% 28.21%, #FF9978 0%, #F15A29 79.07%) !important;
+}
+section.upcommingEvents .roomFee {
+  background-color: #F15A29;
+  color: #FFE4DC;
+  padding: 15px;
+  border-radius: 15px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+section.upcommingEvents .roomFee h4 {
+  color: #FFE4DC;
+}
+section.upcommingEvents .roomFee h3 {
+  color: #FFE4DC;
+  font-size: 30px;
+}
+
 section.faq {
   padding: 70px 0;
 }

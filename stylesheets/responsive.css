@@ -756,6 +756,34 @@ section.yogaTraine .teachers .social i {
   color: #5B1600;
 }
 
+section.upcommingEvents {
+  padding: 70px 0 0;
+  text-align: center;
+}
+section.upcommingEvents .tableBox {
+  border: 1px solid #F15A29;
+  border-radius: 15px;
+}
+section.upcommingEvents .tableBox .table .table > :not(:last-child) > :last-child {
+  border-bottom-color: radial-gradient(91% 105.38% at 9% 28.21%, #FF9978 0%, #F15A29 79.07%) !important;
+}
+section.upcommingEvents .roomFee {
+  background-color: #F15A29;
+  color: #FFE4DC;
+  padding: 15px;
+  border-radius: 15px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+section.upcommingEvents .roomFee h4 {
+  color: #FFE4DC;
+}
+section.upcommingEvents .roomFee h3 {
+  color: #FFE4DC;
+  font-size: 30px;
+}
+
 section.faq {
   padding: 70px 0;
 }
@@ -960,6 +988,36 @@ section.videoReview .iframe iframe {
   width: 100%;
   height: 250px;
   border-radius: 15px;
+}
+
+section.readBlog {
+  padding: 0 0 60px 0;
+}
+section.readBlog .blog {
+  padding: 15px;
+  border-radius: 15px;
+}
+section.readBlog .planes {
+  background-image: url("../assets/packages.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 0;
+  color: #FFE4DC;
+  text-align: center;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+section.readBlog .planes h4 {
+  font-weight: 600;
+  color: #FFE4DC;
+  max-width: 250px;
+  margin: 20px auto;
+}
+section.readBlog .aboutAuthor {
+  background-color: #FFE4DC;
+  border-radius: 15px;
+  padding: 15px 0;
 }
 
 @media only screen and (max-width: 1399px) {
