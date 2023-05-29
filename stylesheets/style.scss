@@ -20,6 +20,7 @@ $darkText: #5B1600;
 $orange: #F15A29;
 $dark: #000000;
 $secondary: #404040;
+$grey: #A4A4A4;
 $light: #FFE4DC;
 $xlight: #FFF5F2;
 $white: #ffffff;
@@ -87,6 +88,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -972,16 +974,33 @@ section.faq {
 
     .container {
         .accordion {
-
             .accordion-item {
-                h2.accordion-header {
+                margin: 20px 0;
+                border: none;
+
+                h3.accordion-header {
 
                     button.accordion-button {
                         border-radius: 12px;
+                        border: 1px solid $orange;
+                        background: linear-gradient(90deg, #FFFFFF 1.45%, #FFD7CA 100%);
+
+                        &:hover {
+                            color: $orange;
+                        }
 
                         &:focus {
                             box-shadow: none;
                         }
+                    }
+
+                    .accordion-button:not(.collapsed) {
+                        background: linear-gradient(90deg, #FFFFFF 1.45%, #FFD7CA 100%);
+                        color: $darkText;
+                    }
+
+                    .accordion-button:not(.collapsed)::after {
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
                     }
                 }
 
@@ -989,6 +1008,7 @@ section.faq {
         }
     }
 }
+
 
 section.package {
     padding: 70px 0;
@@ -1262,5 +1282,172 @@ section.readBlog {
         border-radius: 15px;
         padding: 15px 0;
 
+    }
+}
+
+section.conatctUs {
+    padding: 60px 0;
+
+    .form {
+        border: 1px solid $orange;
+        padding: 15px;
+        border-radius: 15px;
+
+        .content {
+            max-width: 600px;
+
+            h4 {
+                color: $grey;
+            }
+
+            h3.withBg {
+                background-color: $orange;
+                border-radius: 15px;
+                color: $white;
+                font-weight: 500;
+                padding: 15px;
+                font-size: 16px;
+            }
+        }
+
+        form {
+
+            input,
+            textarea {
+                border: 1px solid $orange;
+                margin: 7.5px 0;
+                background-color: $light;
+
+                &::placeholder {
+                    color: $orange;
+                }
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+
+            .btn {
+                margin-top: 7.5px;
+            }
+        }
+
+    }
+
+    .contact {
+        background-color: $orange;
+        border-radius: 15px;
+        color: $white;
+        padding: 15px;
+        position: sticky;
+        top: 15px;
+
+        h3 {
+            color: $white;
+        }
+
+        h4 {
+            color: $white;
+        }
+
+        p {
+            margin: 20px 0 0 0;
+        }
+
+        .social {
+            @include itemPosition(center, flex-start);
+            gap: 15px;
+
+            .icon {
+                @include itemPosition(center, center);
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                background-color: $white;
+
+                i {
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+
+// about us page 
+
+section.aboutpage {
+    background-image: url("../assets/aboutMain.png");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+    h5 {
+        color: $white;
+        position: absolute;
+        left: 6%;
+        font-size: 30px;
+        max-width: 500px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+section.aboutContent {
+    padding: 60px 0;
+}
+
+section.Course {
+
+    .imageContainer {
+        background-image: url("../assets/mainImage.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: relative;
+        border-radius: 15px;
+    }
+}
+
+section.youtube {
+    padding: 0 0 60px 0;
+
+    iframe {
+        border-radius: 15px;
+    }
+}
+
+section.heightLight {
+    padding: 0 0 60px 0;
+    text-align: center;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            font-size: 20px;
+        }
+    }
+}
+
+section.rishikesh {
+    padding: 60px 0;
+
+    .imageContainer {
+        background-image: url("../assets/rishikeshImage.png");
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: relative;
+        border-radius: 15px;
+        margin-bottom: 50px;
     }
 }

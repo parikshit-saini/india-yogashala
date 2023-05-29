@@ -52,6 +52,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -787,11 +788,27 @@ section.upcommingEvents .roomFee h3 {
 section.faq {
   padding: 70px 0;
 }
-section.faq .container .accordion .accordion-item h2.accordion-header button.accordion-button {
-  border-radius: 12px;
+section.faq .container .accordion .accordion-item {
+  margin: 20px 0;
+  border: none;
 }
-section.faq .container .accordion .accordion-item h2.accordion-header button.accordion-button:focus {
+section.faq .container .accordion .accordion-item h3.accordion-header button.accordion-button {
+  border-radius: 12px;
+  border: 1px solid #F15A29;
+  background: linear-gradient(90deg, #FFFFFF 1.45%, #FFD7CA 100%);
+}
+section.faq .container .accordion .accordion-item h3.accordion-header button.accordion-button:hover {
+  color: #F15A29;
+}
+section.faq .container .accordion .accordion-item h3.accordion-header button.accordion-button:focus {
   box-shadow: none;
+}
+section.faq .container .accordion .accordion-item h3.accordion-header .accordion-button:not(.collapsed) {
+  background: linear-gradient(90deg, #FFFFFF 1.45%, #FFD7CA 100%);
+  color: #5B1600;
+}
+section.faq .container .accordion .accordion-item h3.accordion-header .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 section.package {
@@ -1018,4 +1035,151 @@ section.readBlog .aboutAuthor {
   background-color: #FFE4DC;
   border-radius: 15px;
   padding: 15px 0;
+}
+
+section.conatctUs {
+  padding: 60px 0;
+}
+section.conatctUs .form {
+  border: 1px solid #F15A29;
+  padding: 15px;
+  border-radius: 15px;
+}
+section.conatctUs .form .content {
+  max-width: 600px;
+}
+section.conatctUs .form .content h4 {
+  color: #A4A4A4;
+}
+section.conatctUs .form .content h3.withBg {
+  background-color: #F15A29;
+  border-radius: 15px;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 15px;
+  font-size: 16px;
+}
+section.conatctUs .form form input,
+section.conatctUs .form form textarea {
+  border: 1px solid #F15A29;
+  margin: 7.5px 0;
+  background-color: #FFE4DC;
+}
+section.conatctUs .form form input::-moz-placeholder, section.conatctUs .form form textarea::-moz-placeholder {
+  color: #F15A29;
+}
+section.conatctUs .form form input::placeholder,
+section.conatctUs .form form textarea::placeholder {
+  color: #F15A29;
+}
+section.conatctUs .form form input:focus,
+section.conatctUs .form form textarea:focus {
+  box-shadow: none;
+}
+section.conatctUs .form form .btn {
+  margin-top: 7.5px;
+}
+section.conatctUs .contact {
+  background-color: #F15A29;
+  border-radius: 15px;
+  color: #ffffff;
+  padding: 15px;
+  position: sticky;
+  top: 15px;
+}
+section.conatctUs .contact h3 {
+  color: #ffffff;
+}
+section.conatctUs .contact h4 {
+  color: #ffffff;
+}
+section.conatctUs .contact p {
+  margin: 20px 0 0 0;
+}
+section.conatctUs .contact .social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+section.conatctUs .contact .social .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+}
+section.conatctUs .contact .social .icon i {
+  color: #F15A29;
+}
+
+section.aboutpage {
+  background-image: url("../assets/aboutMain.png");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+section.aboutpage h5 {
+  color: #ffffff;
+  position: absolute;
+  left: 6%;
+  font-size: 30px;
+  max-width: 500px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+section.aboutContent {
+  padding: 60px 0;
+}
+
+section.Course .imageContainer {
+  background-image: url("../assets/mainImage.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  border-radius: 15px;
+}
+
+section.youtube {
+  padding: 0 0 60px 0;
+}
+section.youtube iframe {
+  border-radius: 15px;
+}
+
+section.heightLight {
+  padding: 0 0 60px 0;
+  text-align: center;
+}
+section.heightLight ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+section.heightLight ul li {
+  font-size: 20px;
+}
+
+section.rishikesh {
+  padding: 60px 0;
+}
+section.rishikesh .imageContainer {
+  background-image: url("../assets/rishikeshImage.png");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  border-radius: 15px;
+  margin-bottom: 50px;
 }/*# sourceMappingURL=style.css.map */
