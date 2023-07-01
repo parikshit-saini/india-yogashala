@@ -315,4 +315,37 @@
             text-align: center;
         }
     }
+
+    section.courseMain {
+        height: 500px;
+
+        p {
+            font-size: 25px;
+        }
+    }
+
+
+    section.aboutUs {
+        padding: 0 0 70px 0;
+
+        .highlights {
+
+            p.heading {
+                font-size: 25px;
+            }
+        }
+    }
+
+    section.upcommingEvents {
+
+        .offerBox {
+            @include itemPosition(center, space-around);
+            flex-wrap: wrap;
+
+            p {
+                font-size: 20px;
+            }
+
+        }
+    }
 }

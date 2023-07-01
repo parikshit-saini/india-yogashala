@@ -91,6 +91,26 @@ input:focus {
   box-shadow: none !important;
 }
 
+.nav-tabs {
+  margin: 50px 0;
+  border-bottom: none;
+  justify-content: center;
+  gap: 15px;
+}
+.nav-tabs .nav-item a {
+  background-color: #FFE4DC;
+  border-radius: 10px;
+  color: #F15A29;
+}
+.nav-tabs .nav-item a.active {
+  background-color: #F15A29;
+  color: #ffffff;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
 section.headerTop {
   background-image: url("../assets/headerTop.png");
   background-image: url("../assets/headerTop.png");
@@ -765,8 +785,42 @@ section.upcommingEvents .tableBox {
   border: 1px solid #F15A29;
   border-radius: 15px;
 }
-section.upcommingEvents .tableBox .table .table > :not(:last-child) > :last-child {
-  border-bottom-color: radial-gradient(91% 105.38% at 9% 28.21%, #FF9978 0%, #F15A29 79.07%) !important;
+section.upcommingEvents .tableBox .table {
+  overflow: hidden;
+}
+section.upcommingEvents .tableBox .table .availability {
+  padding: 5px 10px;
+  background-color: #FFE4DC;
+  border: 1px solid #F15A29;
+  color: #F15A29;
+  border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+}
+section.upcommingEvents .tableBox .table tr {
+  overflow: hidden;
+}
+section.upcommingEvents .tableBox .table tr th {
+  padding: 15px;
+  border-bottom: 1px solid #F15A29;
+  background-color: #F15A29;
+  color: #ffffff;
+  font-weight: 500;
+  vertical-align: middle !important;
+}
+section.upcommingEvents .tableBox .table tr th:last-child {
+  border-radius: 0 15px 0 0;
+}
+section.upcommingEvents .tableBox .table tr th:first-child {
+  border-radius: 15px 0 0 0;
+}
+section.upcommingEvents .tableBox .table tr td {
+  vertical-align: middle !important;
+}
+section.upcommingEvents .tableBox .table tr:last-child {
+  border-bottom: #ffffff;
 }
 section.upcommingEvents .roomFee {
   background-color: #F15A29;
@@ -783,6 +837,22 @@ section.upcommingEvents .roomFee h4 {
 section.upcommingEvents .roomFee h3 {
   color: #FFE4DC;
   font-size: 30px;
+}
+section.upcommingEvents .offerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  border-radius: 15px;
+  filter: drop-shadow(5px 4px 20px rgba(0, 0, 0, 0.3));
+  background-color: #ffffff;
+  padding: 30px 20px;
+}
+section.upcommingEvents .offerBox p {
+  margin-bottom: 0;
+  font-size: 28px;
+  color: #F15A29;
+  font-weight: 500;
 }
 
 section.faq {
@@ -812,7 +882,7 @@ section.faq .container .accordion .accordion-item h3.accordion-header .accordion
 }
 
 section.package {
-  padding: 70px 0;
+  padding: 0 0 70px 0;
   position: relative;
 }
 section.package .packagelist {
@@ -1030,6 +1100,56 @@ section.readBlog .planes h4 {
   color: #FFE4DC;
   max-width: 250px;
   margin: 20px auto;
+}
+section.readBlog .shareBox {
+  margin-top: 50px;
+  position: sticky;
+  top: 60px;
+}
+section.readBlog .shareBox .socialMedia {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+section.readBlog .shareBox .socialMedia .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #F15A29;
+  transition: all 0.5s;
+}
+section.readBlog .shareBox .socialMedia .icon i {
+  color: #FFE4DC;
+}
+section.readBlog .shareBox .socialMedia .icon:hover {
+  border-radius: 50%;
+}
+section.readBlog .shareBox .socialMedia .icon:hover i {
+  color: #5B1600;
+}
+section.readBlog .shareBox .socialMedia .visits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #FFE4DC;
+  border: 1px solid #F15A29;
+  color: #F15A29;
+  font-weight: 600;
+  gap: 10px;
+  padding: 0px 15px;
+}
+section.readBlog .shareBox .socialMedia .visits span {
+  font-weight: 400;
+}
+section.readBlog .shareBox .socialMedia .visits i {
+  color: #FFE4DC;
 }
 section.readBlog .aboutAuthor {
   background-color: #FFE4DC;

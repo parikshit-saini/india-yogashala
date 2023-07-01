@@ -52,6 +52,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -88,6 +89,26 @@ h4 {
 
 input:focus {
   box-shadow: none !important;
+}
+
+.nav-tabs {
+  margin: 50px 0;
+  border-bottom: none;
+  justify-content: center;
+  gap: 15px;
+}
+.nav-tabs .nav-item a {
+  background-color: #FFE4DC;
+  border-radius: 10px;
+  color: #F15A29;
+}
+.nav-tabs .nav-item a.active {
+  background-color: #F15A29;
+  color: #ffffff;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 section.headerTop {
@@ -764,8 +785,42 @@ section.upcommingEvents .tableBox {
   border: 1px solid #F15A29;
   border-radius: 15px;
 }
-section.upcommingEvents .tableBox .table .table > :not(:last-child) > :last-child {
-  border-bottom-color: radial-gradient(91% 105.38% at 9% 28.21%, #FF9978 0%, #F15A29 79.07%) !important;
+section.upcommingEvents .tableBox .table {
+  overflow: hidden;
+}
+section.upcommingEvents .tableBox .table .availability {
+  padding: 5px 10px;
+  background-color: #FFE4DC;
+  border: 1px solid #F15A29;
+  color: #F15A29;
+  border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+}
+section.upcommingEvents .tableBox .table tr {
+  overflow: hidden;
+}
+section.upcommingEvents .tableBox .table tr th {
+  padding: 15px;
+  border-bottom: 1px solid #F15A29;
+  background-color: #F15A29;
+  color: #ffffff;
+  font-weight: 500;
+  vertical-align: middle !important;
+}
+section.upcommingEvents .tableBox .table tr th:last-child {
+  border-radius: 0 15px 0 0;
+}
+section.upcommingEvents .tableBox .table tr th:first-child {
+  border-radius: 15px 0 0 0;
+}
+section.upcommingEvents .tableBox .table tr td {
+  vertical-align: middle !important;
+}
+section.upcommingEvents .tableBox .table tr:last-child {
+  border-bottom: #ffffff;
 }
 section.upcommingEvents .roomFee {
   background-color: #F15A29;
@@ -783,6 +838,22 @@ section.upcommingEvents .roomFee h3 {
   color: #FFE4DC;
   font-size: 30px;
 }
+section.upcommingEvents .offerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  border-radius: 15px;
+  filter: drop-shadow(5px 4px 20px rgba(0, 0, 0, 0.3));
+  background-color: #ffffff;
+  padding: 30px 20px;
+}
+section.upcommingEvents .offerBox p {
+  margin-bottom: 0;
+  font-size: 28px;
+  color: #F15A29;
+  font-weight: 500;
+}
 
 section.faq {
   padding: 70px 0;
@@ -794,12 +865,16 @@ section.faq .container .accordion .accordion-item {
 section.faq .container .accordion .accordion-item h3.accordion-header button.accordion-button {
   border-radius: 12px;
   border: 1px solid #F15A29;
+  background: linear-gradient(90deg, #FFFFFF 1.45%, #FFD7CA 100%);
+}
+section.faq .container .accordion .accordion-item h3.accordion-header button.accordion-button:hover {
+  color: #F15A29;
 }
 section.faq .container .accordion .accordion-item h3.accordion-header button.accordion-button:focus {
   box-shadow: none;
 }
 section.faq .container .accordion .accordion-item h3.accordion-header .accordion-button:not(.collapsed) {
-  background-color: #FFE4DC;
+  background: linear-gradient(90deg, #FFFFFF 1.45%, #FFD7CA 100%);
   color: #5B1600;
 }
 section.faq .container .accordion .accordion-item h3.accordion-header .accordion-button:not(.collapsed)::after {
@@ -1026,6 +1101,56 @@ section.readBlog .planes h4 {
   max-width: 250px;
   margin: 20px auto;
 }
+section.readBlog .shareBox {
+  margin-top: 50px;
+  position: sticky;
+  top: 60px;
+}
+section.readBlog .shareBox .socialMedia {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+section.readBlog .shareBox .socialMedia .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #F15A29;
+  transition: all 0.5s;
+}
+section.readBlog .shareBox .socialMedia .icon i {
+  color: #FFE4DC;
+}
+section.readBlog .shareBox .socialMedia .icon:hover {
+  border-radius: 50%;
+}
+section.readBlog .shareBox .socialMedia .icon:hover i {
+  color: #5B1600;
+}
+section.readBlog .shareBox .socialMedia .visits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #FFE4DC;
+  border: 1px solid #F15A29;
+  color: #F15A29;
+  font-weight: 600;
+  gap: 10px;
+  padding: 0px 15px;
+}
+section.readBlog .shareBox .socialMedia .visits span {
+  font-weight: 400;
+}
+section.readBlog .shareBox .socialMedia .visits i {
+  color: #FFE4DC;
+}
 section.readBlog .aboutAuthor {
   background-color: #FFE4DC;
   border-radius: 15px;
@@ -1131,6 +1256,52 @@ section.aboutpage h5 {
 
 section.aboutContent {
   padding: 60px 0;
+}
+
+section.Course .imageContainer {
+  background-image: url("../assets/mainImage.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  border-radius: 15px;
+}
+
+section.youtube {
+  padding: 0 0 60px 0;
+}
+section.youtube iframe {
+  border-radius: 15px;
+}
+
+section.heightLight {
+  padding: 0 0 60px 0;
+  text-align: center;
+}
+section.heightLight ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+section.heightLight ul li {
+  font-size: 20px;
+}
+
+section.rishikesh {
+  padding: 60px 0;
+}
+section.rishikesh .imageContainer {
+  background-image: url("../assets/rishikeshImage.png");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  border-radius: 15px;
+  margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 1399px) {
@@ -1342,5 +1513,26 @@ section.aboutContent {
     flex-direction: column;
     width: 100%;
     text-align: center;
+  }
+  section.courseMain {
+    height: 500px;
+  }
+  section.courseMain p {
+    font-size: 25px;
+  }
+  section.aboutUs {
+    padding: 0 0 70px 0;
+  }
+  section.aboutUs .highlights p.heading {
+    font-size: 25px;
+  }
+  section.upcommingEvents .offerBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  section.upcommingEvents .offerBox p {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=responsive.css.map */

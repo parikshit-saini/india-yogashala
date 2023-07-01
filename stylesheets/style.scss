@@ -128,6 +128,32 @@ input {
     }
 }
 
+.nav-tabs {
+    margin: 50px 0;
+    border-bottom: none;
+    justify-content: center;
+    gap: 15px;
+
+    .nav-item {
+
+        a {
+            background-color: $light;
+            border-radius: 10px;
+            color: $orange;
+
+            &.active {
+                background-color: $orange;
+                color: $white;
+
+            }
+        }
+    }
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
 // Index page Style 
 
 section.headerTop {
@@ -942,9 +968,47 @@ section.upcommingEvents {
         border-radius: 15px;
 
         .table {
+            overflow: hidden;
 
-            .table>:not(:last-child)>:last-child {
-                border-bottom-color: $primary !important;
+            .availability {
+                padding: 5px 10px;
+                background-color: $light;
+                border: 1px solid $orange;
+                color: $orange;
+                border-radius: 10px;
+                width: fit-content;
+                text-align: center;
+                margin: auto;
+            }
+
+            tr {
+                overflow: hidden;
+
+                th {
+                    padding: 15px;
+                    border-bottom: 1px solid $orange;
+                    background-color: $orange;
+                    color: $white;
+                    font-weight: 500;
+                    vertical-align: middle !important;
+
+                    &:last-child {
+                        border-radius: 0 15px 0 0;
+                    }
+
+                    &:first-child {
+                        border-radius: 15px 0 0 0;
+                    }
+                }
+
+                td {
+                    vertical-align: middle !important;
+
+                }
+
+                &:last-child {
+                    border-bottom: $white;
+                }
             }
         }
 
@@ -966,6 +1030,23 @@ section.upcommingEvents {
             color: $light;
             font-size: 30px;
         }
+    }
+
+    .offerBox {
+        @include itemPosition(center, space-around);
+        gap: 15px;
+        border-radius: 15px;
+        filter: drop-shadow(5px 4px 20px rgba(0, 0, 0, 0.3));
+        background-color: $white;
+        padding: 30px 20px;
+
+        p {
+            margin-bottom: 0;
+            font-size: 28px;
+            color: $orange;
+            font-weight: 500;
+        }
+
     }
 }
 
@@ -1011,7 +1092,7 @@ section.faq {
 
 
 section.package {
-    padding: 70px 0;
+    padding: 0 0 70px 0;
     position: relative;
 
     .packagelist {
@@ -1274,6 +1355,59 @@ section.readBlog {
             color: $light;
             max-width: 250px;
             margin: 20px auto;
+        }
+    }
+
+    .shareBox {
+        margin-top: 50px;
+        position: sticky;
+        top: 60px;
+
+        .socialMedia {
+            @include itemPosition(center, flex-start);
+            gap: 10px;
+
+            .icon {
+                @include itemPosition(center, center);
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                background-color: $orange;
+                transition: all 0.5s;
+
+                i {
+                    color: $light;
+                }
+
+                &:hover {
+                    border-radius: 50%;
+
+                    i {
+                        color: $darkText;
+                    }
+                }
+            }
+
+            .visits {
+                @include itemPosition(center, center);
+                height: 40px;
+                border-radius: 8px;
+                background-color: $light;
+                border: 1px solid $orange;
+                color: $orange;
+                font-weight: 600;
+                gap: 10px;
+                padding: 0px 15px;
+
+                span {
+                    font-weight: 400;
+                }
+
+                i {
+                    color: $light;
+                }
+            }
         }
     }
 
